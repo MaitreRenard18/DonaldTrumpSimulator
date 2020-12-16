@@ -5,18 +5,24 @@
 	<title> Donald Trump simulator </title>
 	<link rel="stylesheet" href="style.css" type="text/css" > </link>
 </head>
-  
+
+<style>
+button:hover {
+    background-color: #d7d7d7;
+}
+</style>
+
 <body>
 
-	<div class = "Trump_Side">
+	<div>
 		<h1 style="font-family:roboto" > Donald Trump simulator </h1>
 		<img id="Trump" src="Angry_Trump.png" alt="Photo web" width="800" height="800" style="border-radius:10px"> </img>
 	</div>
 	
-	<div class = "Border_Side" style="position:absolute; left:850px; top:0px">
+	<div style="position:absolute; left:850px; top:0px">
 		<h1 id="Title" style="font-family:roboto"> A great wall </h1>
 		<p id="Text" style="font-family:roboto"> Help Donald Trump building a great Wall </p>
-		<button id="Builder" name="Builder" type="button" style="height:75px; width:800px; border-radius:10px; border:0px; cursor:pointer; outline:none" onclick=BuildAWall() > Build a wall </button>
+		<button class = "Builder_Buton" id="Builder" name="Builder" type="button" style="height:75px; width:800px; border-radius:10px; border:0px; cursor:pointer; outline:none" onclick=BuildAWall() > Build a wall </button> 
 		<p> </p>
 		<img id="Border" src="Border.png" width="800" height="450" style="border-radius:10px" > </img>
 	</div>
@@ -37,6 +43,7 @@
 			window.location.reload();
 		}
 	}
+	
 	</script>
 
 </body>	
