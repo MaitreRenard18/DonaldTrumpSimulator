@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" > </meta>
+	<title> Donald Trump simulator </title>
+	<link rel="stylesheet" href="style.css" type="text/css" > </link>
+</head>
+  
+<body>
+
+	<div class = "Trump_Side">
+		<h1 style="font-family:roboto" > Donald Trump simulator </h1>
+		<img id="Trump" src="Angry_Trump.png" alt="Photo web" width="800" height="800" style="border-radius:10px"> </img>
+	</div>
+	
+	<div class = "Border_Side" style="position:absolute; left:850px; top:0px">
+		<h1 id="Title" style="font-family:roboto"> A great wall </h1>
+		<p id="Text" style="font-family:roboto"> Help donald Trump building a great Wall </p>
+		<button id="Builder" name="Builder" type="button" style="height:75px; width:800px; border-radius:10px; border:0px" onclick="BuildAWall()" > Build a wall </button>
+		<p> </p>
+		<img id="Border" src="Border.png" width="800" height="450" style="border-radius:10px" > </img>
+	</div>
+	
+	<script>
+	let Action = 0; 
+	
+	function BuildAWall() {
+		if (Action === 0) {
+			Action = 1
+			
+			document.getElementById("Border").src="Wall.png";
+			document.getElementById("Trump").src="Happy_Trump.png";
+			document.getElementById("Title").innerHTML="Congratulation!";
+			document.getElementById("Text").innerHTML="You made Donald Trump happy";
+			document.getElementById("Builder").innerHTML="Try again?";
+		} else {
+			window.location.reload();
+		}
+	}
+	</script>
+
+</body>	
+</html>
